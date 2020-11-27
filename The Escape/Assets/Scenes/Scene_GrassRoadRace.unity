@@ -2449,7 +2449,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 320b1c2af77554f99a1658df4a6d3d5c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.18
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 320b1c2af77554f99a1658df4a6d3d5c,
         type: 3}
@@ -2530,9 +2530,6 @@ MonoBehaviour:
   jumpP: 10
   gravityModifier: 2
   isOnground: 1
-  horizontalInput: 0
-  speed: 10
-  xRange: 5
 --- !u!65 &690809550
 BoxCollider:
   m_ObjectHideFlags: 0
