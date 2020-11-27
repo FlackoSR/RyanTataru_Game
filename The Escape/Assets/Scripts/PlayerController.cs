@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour
     public float jumpP = 10;
     public float gravityModifier;
     public bool isOnground = true;
+    public float horizontalInput;
+    public float speed = 10.0f;
+    public float xRange = 5;
 
     void Start()
     {
@@ -23,6 +26,16 @@ public class PlayerController : MonoBehaviour
         {
             robotRIGBODY.AddForce(Vector3.up * jumpP, ForceMode.Impulse);
             isOnground = false;
+        }
+        horizontalInput = Input.GetAxis("Horizontal");
+        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+        if(transform.position.x < xRange)
+        {
+            transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
+        }
+        if(transform.position.x > xRange)
+        {
+            transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
        
     }
