@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody robotRIGBODY;
-    public float jumpP = 10;
-    public float gravityModifier;
+    private float jumpP = 10;
+    private float gravityModifier = 2;
     public bool isOnground = true;
     private float horizontalInput;
     private float speed = 5.0f;
