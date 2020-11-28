@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     private Animator PlayerMov;
     private float jumpP = 10;
     private float gravityModifier = 2;
-    public bool isOnground = true;
+    private bool isOnground = true;
     private float horizontalInput;
     private float speed = 5.0f;
     private float Xrange = 5;
@@ -45,11 +45,11 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
-
+     
 
     
     }
-
+ 
     private void OnCollisionEnter(Collision collision)
     {
         isOnground = true;
