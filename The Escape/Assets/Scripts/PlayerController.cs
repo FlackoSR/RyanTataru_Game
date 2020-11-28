@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody robotRIGBODY;
+    private Animator PlayerMov;
     private float jumpP = 10;
     private float gravityModifier = 2;
     public bool isOnground = true;
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         robotRIGBODY = GetComponent<Rigidbody>();
+        PlayerMov = GetComponent<Animator>();
         Physics.gravity *= gravityModifier;
     }
 
@@ -26,6 +28,7 @@ public class PlayerController : MonoBehaviour
         {
             robotRIGBODY.AddForce(Vector3.up * jumpP, ForceMode.Impulse);
             isOnground = false;
+            PlayerMov.SetTrigger("Jump_trig");
         }
         if (transform.position.x < -Xrange)
         {
