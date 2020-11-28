@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody robotRIGBODY;
     private Animator PlayerMov;
+
     private float jumpP = 10;
     private float gravityModifier = 2;
     private bool isOnground = true;
@@ -45,12 +46,13 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
-        if(transform.position.y < -1f)
+        if (transform.position.y < -1f)
         {
-           FindObjectOfType<GameManager>().EndGame();
+            FindObjectOfType<GameManager>().EndGame();
         }
+
     }
- 
+
     private void OnCollisionEnter(Collision collision)
     {
         isOnground = true;
