@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Start Game.unity
+    guid: a4d7898b45a5e30448c1e55d28556f1a
+  - enabled: 1
     path: Assets/Scenes/The Escape.unity
     guid: e323a50016ef3484f9e0d4d42c6bbc2b
   - enabled: 1
