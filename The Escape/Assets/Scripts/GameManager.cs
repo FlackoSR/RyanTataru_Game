@@ -5,8 +5,8 @@ public class GameManager : MonoBehaviour
 {
 
       bool gameHasEnded = false;
-      public float restartDelay = 1f;
-      public GameObject gameOverPanel;
+      private float restartDelay = 1f;
+     // public GameObject gameOverPanel;
       public void EndGame()
      {
       if(gameHasEnded == false)
@@ -20,11 +20,11 @@ public class GameManager : MonoBehaviour
       }
         void Update()
         {
-            if (gameHasEnded)
-            {
-                Time.timeScale = 0;
-                gameOverPanel.SetActive(true);
-            }
+           // if (gameHasEnded)
+           // {
+            //    Time.timeScale = 0;
+            //    gameOverPanel.SetActive(true);
+          //  }
         }
     public void Restart()
       {
