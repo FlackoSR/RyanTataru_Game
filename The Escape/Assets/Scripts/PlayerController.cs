@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -18,7 +16,11 @@ public class PlayerController : MonoBehaviour
     {
         robotRIGBODY = GetComponent<Rigidbody>();
         PlayerMov = GetComponent<Animator>();
-        Physics.gravity *= gravityModifier;
+         //if(gravityModifier)
+        //{
+            Physics.gravity *= gravityModifier;
+        //}
+        
     }
 
     // Update is called once per frame

@@ -4,19 +4,17 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
 
-    public PlayerController movement;
-  
-    
+    void Start()
+    {
+
+    }
     void OnCollisionEnter(Collision collisionInfo)
     {
 
        if (collisionInfo.collider.tag == "Obstacle")
         {
-            movement.enabled = false;
-            //Debug.Log("Hit it");
             FindObjectOfType<GameManager>().EndGame();
-
-
+            SceneManager.LoadScene("GameOver");
         }
     }
 }
