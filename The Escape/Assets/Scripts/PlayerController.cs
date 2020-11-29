@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
     private Animator PlayerMov;
 
     private float jumpP = 10;
-    private float gravityModifier = 2;
+    //private float gravityModifier = 2;
     private bool isOnground = true;
     private float horizontalInput;
     private float speed = 5.0f;
@@ -16,11 +16,12 @@ public class PlayerController : MonoBehaviour
     {
         robotRIGBODY = GetComponent<Rigidbody>();
         PlayerMov = GetComponent<Animator>();
-         //if(gravityModifier)
-        //{
-            Physics.gravity *= gravityModifier;
-        //}
+        //if()
+        // {
         
+        // Physics.gravity *= gravityModifier;
+        // }
+
     }
 
     // Update is called once per frame
